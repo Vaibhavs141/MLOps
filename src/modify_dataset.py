@@ -8,6 +8,9 @@ df["purpose_of_ai"] = df["purpose_of_ai"].fillna("None")
 # Improvement in grades after using AI
 df["grade_improvement"] = df["grades_after_ai"] - df["grades_before_ai"]
 
+# NEW CHANGE (v2)
+df["study_hours_normalized"] = df["study_hours_per_day"] / df["study_hours_per_day"].max()
+
 # Binary encoding for AI usage
 df["uses_ai_binary"] = df["uses_ai"].map({"Yes": 1, "No": 0})
 
