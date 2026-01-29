@@ -1,0 +1,8 @@
+stages:
+  preprocess:
+    cmd: python src/modify_dataset.py
+    deps:
+    - data/raw/students_ai_usage.csv
+    - src/modify_dataset.py
+    outs:
+    - data/processed/students_ai_usage.csv

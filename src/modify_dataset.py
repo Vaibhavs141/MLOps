@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("data/students_ai_usage.csv")
+df = pd.read_csv("data/raw/students_ai_usage.csv")
 
 df["ai_tools_used"] = df["ai_tools_used"].fillna("None")
 df["purpose_of_ai"] = df["purpose_of_ai"].fillna("None")
@@ -14,6 +14,6 @@ df["study_hours_normalized"] = df["study_hours_per_day"] / df["study_hours_per_d
 # Binary encoding for AI usage
 df["uses_ai_binary"] = df["uses_ai"].map({"Yes": 1, "No": 0})
 
-df.to_csv("data/students_ai_usaget.csv", index=False)
+df.to_csv("data/processed/students_ai_usage.csv", index=False)
 
 print("Dataset modified successfully")

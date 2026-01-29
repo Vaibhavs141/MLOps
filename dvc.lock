@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python src/modify_dataset.py
+    deps:
+    - path: data/raw/students_ai_usage.csv
+      hash: md5
+      md5: 433ffeb8b06c216909e9230cd3c4e55f
+      size: 3962
+    - path: src/modify_dataset.py
+      hash: md5
+      md5: d14918348b5f1f189bfc25f97e49fba0
+      size: 627
+    outs:
+    - path: data/processed/students_ai_usage.csv
+      hash: md5
+      md5: 32d3a9ee19bd277335bb00af7010fcaf
+      size: 5466
