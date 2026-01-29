@@ -1,7 +1,9 @@
 __pycache__/
 .venv/
 .env
-data/*
-!data/*.dvc
+/data/raw/*
+/data/processed/*
+!/data/raw/*.dvc
+!/data/processed/*.dvc
 models/
 *.log
